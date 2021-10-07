@@ -1,3 +1,32 @@
+# WMM2020_CEXT
+
+This library was modified to make a Python C Extension. This makes the library easy to install if you have the 
+proper compilers installed. Additionally, I published Windows .whl binaries to pypi.org.
+
+## Install
+
+wmm2020_cext has prebuilt Windows binaries (.whl files), so the library can easily be installed with pip.
+
+
+```sh
+python -m pip install wmm2020_cext
+```
+
+Use with ``wmm2020``
+```python
+import wmm2020
+import numpy as np
+
+wmm2020.wmm(np.array([0]), np.array([0]), 0, 0)
+```
+
+## Manually Install
+
+Install Visual Studio C Compilers https://wiki.python.org/moin/WindowsCompilers to compile the C extension. 
+If this is done correctly you can simply ``pip install ./path/to/library`` or build your binaries
+``python setup.py bdist_wheel`` (or ``pip wheel --no-deps ./path/to/library``). The wheel library is required.
+
+
 # WMM2020
 
 ![Actions Status](https://github.com/space-physics/wmm2020/workflows/ci/badge.svg)
